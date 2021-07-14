@@ -178,7 +178,7 @@
 
 # #### 3.1.1 - Extracción de los pixeles de una imagen (fuente de información)
 
-# In[1]:
+# In[24]:
 
 
 from PIL import Image
@@ -236,7 +236,7 @@ def fuente_info(imagen):
 
 # #### 3.1.2. - Codificación de pixeles a una base binaria (bits)
 
-# In[2]:
+# In[25]:
 
 
 import numpy as np
@@ -291,7 +291,7 @@ def rgb_a_bit(array_imagen):
 # 
 # A través de este "artificio" la modulación **BPSK** (pero solo BPSK) pasa de ser un asunto de fases a un tema de amplitud. Esto simplifica en gran medida la programación del esquema, puesto que si el bit entrante es cero, entonces la fase de la portadora se invierte con solo tomar $A_c = -1$. En el caso contrario (si el bit entrante es un uno), entonces $A_c = 1$ y ya no es necesario lidiar con las fases en términos del ángulo $\theta_c$. A continuación se muestra una implementación de esta modulación.
 
-# In[3]:
+# In[26]:
 
 
 import numpy as np
@@ -370,7 +370,7 @@ def modulador(bits, fc, mpp):
 
 # #### 3.1.4. - Construcción de un canal con ruido AWGN
 
-# In[4]:
+# In[27]:
 
 
 import numpy as np
@@ -402,7 +402,7 @@ def canal_ruidoso(senal_Tx, Pm, SNR):
 
 # #### 3.1.5. - Esquema de demodulación
 
-# In[5]:
+# In[28]:
 
 
 import numpy as np
@@ -489,7 +489,7 @@ def demodulador(senal_Rx, portadora_I, portadora_Q, mpp):
 
 # #### 3.1.6. - Reconstrucción de la imagen
 
-# In[6]:
+# In[29]:
 
 
 import numpy as np
@@ -519,7 +519,7 @@ def bits_a_rgb(bits_Rx, dimensiones):
 # 
 # **Nota**: esta simulación tarda un poco y quizá hay que hacerla dos veces.
 
-# In[22]:
+# In[30]:
 
 
 import numpy as np
@@ -577,7 +577,7 @@ Fig.tight_layout()
 plt.imshow(imagen_Rx)
 
 
-# In[20]:
+# In[31]:
 
 
 import matplotlib.pyplot as plt
@@ -745,7 +745,7 @@ plt.show()
 # \mathcal{S}_{XX}(\omega) = \lim_{T \rightarrow \infty}\frac{E[\vert X_{T}(\omega) \vert^2]}{2T}
 # \end{equation}
 
-# In[23]:
+# In[32]:
 
 
 from scipy import fft
