@@ -25,4 +25,16 @@ poder realizar la modulación 16-QAM.
 
 La imagen obtenida de la simulación se muestra a continuación:
 
-![Imágen no se encuentra](Proyecto4/comparacion_imagenes.png)
+![Imágen no se encuentra](https://github.com/wilmermora1/Proyecto4/blob/main/comparacion_imagenes.png)
+
+Se observa que hay alguna información perdida debido al ruido que se agregó a la señal
+modulada en la simulación. Además, al correr el programa se obtiene que hubo 29 833 errores,
+generando un BER de 0.0705. Esta diferencia en el ruido respecto a la modulación BPSK se debe a
+que es una modulación que envía información más rápido pues cada símbolo contiene 4 bits.
+
+Así mismo, se muestra a continuación una imágen donde se observan la señal modulada en verde, 
+la señal modulada más el ruido en azul y la señal demodulada. Como se observa, el ruido genera una 
+distorción considerable, pero por el resultado, aún se puede extraer información suficiente
+para tener una imagen observable.
+
+![Imágen no se encuentra](https://github.com/wilmermora1/Proyecto4/blob/main/graficas.png)
